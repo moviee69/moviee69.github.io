@@ -17,11 +17,14 @@
       <button class="filter-btn" type="button" data-filter="barat">Barat</button>
     </nav>
   </header>
+  {{ AD_SOCIAL_BAR }}
+  <div class="ad-slot ad-slot-banner" aria-label="Iklan Banner"><div class="ad-banner-desktop">{{ AD_BANNER_DESKTOP }}</div><div class="ad-banner-mobile">{{ AD_BANNER_MOBILE }}</div></div>
   <main>
     <nav class="related-pagination home-pagination-top" id="homePaginationTop" aria-label="Halaman video"></nav>
     <section class="video-grid" id="videoGrid">
 {{ VIDEO_CARDS }}
     </section>
+    <div class="related-native-ad ad-slot" aria-label="Iklan Native">{{ AD_NATIVE }}</div>
     <div class="home-below">
       <nav class="related-pagination" id="homePagination" aria-label="Halaman video"></nav>
       <section class="description">
