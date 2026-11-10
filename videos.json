@@ -8,5 +8,15 @@
     "deskripsi": "Video1",
     "kategori": "papua",
     "cover": "covers/video-1-papua-part3.jpg"
+  },
+  {
+    "slug": "video-2-papua-part4",
+    "judul": "Video 2",
+    "driveId": "Jsujsjsj",
+    "tanggal": "2026-11-11",
+    "jam": "08:29",
+    "deskripsi": "Video 2",
+    "kategori": "papua",
+    "cover": "covers/video-2-papua-part4.jpg"
   }
 ]
