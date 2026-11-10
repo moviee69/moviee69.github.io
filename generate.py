@@ -107,7 +107,7 @@ def main():
         out=vt.replace("{{ JUDUL }}",esc(v["judul"])).replace("{{ DESKRIPSI }}",esc(v["deskripsi"])).replace("{{ DRIVE_ID }}",esc(v.get("driveId", ""))).replace("{{ PLAYER_SRC }}",esc(player_src)).replace("{{ PLAYER_MODE }}",esc(player_mode)).replace("{{ SMARTLINK }}",esc(smart)).replace("{{ VIDEO_POPUNDER }}",video_popunder).replace("{{ KATEGORI }}",esc(v["kategori"])).replace("{{ TANGGAL }}",esc(dtext(v))).replace("{{ COVER }}",esc(cover(v,True))).replace("{{ OG_COVER }}",esc(og(v))).replace("{{ PAGE_URL }}",esc(f'{SITE_URL}/videos/{v["slug"]}.html' if SITE_URL else f'videos/{v["slug"]}.html'))
         related=[x for x in ordered if x["slug"]!=v["slug"]]
         related_html='\n'.join(rel(x) for x in related) or '<p>Belum ada video lainnya.</p>'
-        native_raw=ad("native")  # kode Adsterra dipakai apa adanya (container ID tidak diubah)
+        native_raw=native_ad("related-"+re.sub(r"[^A-Za-z0-9_-]", "-", str(v["slug"])))
         native_html=f'<div class="related-native-ad ad-slot" aria-label="Iklan Native">{native_raw}</div>' if native_raw else ''
         out=out.replace("{{ RELATED_VIDEOS }}",related_html).replace("{{ RELATED_NATIVE_AD }}",native_html)
         out=out.replace("{{ AD_POPUNDER }}","").replace("{{ AD_SOCIAL_BAR }}",ad("social_bar")).replace("{{ AD_BANNER_DESKTOP }}",ad("banner_desktop")).replace("{{ AD_BANNER_MOBILE }}",ad("banner_mobile"))
