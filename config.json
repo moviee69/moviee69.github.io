@@ -1,6 +1,6 @@
 {
   "site_name": "MOVIEE69",
-  "site_url": "https://moviee69.github.io/moviee69",
+  "site_url": "https://moviee69.github.io",
   "categories": [
     "indonesia",
     "papua",
@@ -10,11 +10,13 @@
   "legacy_site_url": "",
   "github": {
     "owner": "moviee69",
-    "repository": "moviee69",
+    "repository": "moviee69.github.io",
     "branch": "main"
   },
   "ads": {
     "enabled": true,
+    "popunder_enabled": true,
+    "smartlink_enabled": true,
     "popunder": "",
     "social_bar": "",
     "banner_desktop": "",

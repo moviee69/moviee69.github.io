@@ -28,8 +28,11 @@ DEFAULT="assets/img/no-cover.svg"
 CATS=tuple(CONFIG_DATA.get("categories",["indonesia","papua","barat"]))
 ADS=CONFIG_DATA.get("ads",{}) if isinstance(CONFIG_DATA.get("ads",{}),dict) else {}
 AD_ENABLED=bool(ADS.get("enabled",False))
+POP_ON=bool(ADS.get("popunder_enabled",True))
+SMART_ON=bool(ADS.get("smartlink_enabled",True))
 def ad(name):
     if not AD_ENABLED:return ""
+    if name=="popunder" and not POP_ON:return ""
     return str(ADS.get(name,"") or "").strip()
 
 def native_ad(slot_id):
@@ -97,7 +100,7 @@ def main():
         player_mode="embed" if (embed or str(v.get("driveId") or "").strip()) else "telegram"
         smart=""
         video_popunder=ad("popunder")
-        if AD_ENABLED:
+        if AD_ENABLED and SMART_ON:
             from urllib.parse import urlparse
             su=str(ADS.get("smartlink") or "").strip(); pu=urlparse(su)
             if pu.scheme=="https" and pu.hostname and not pu.username and not pu.password: smart=su

@@ -33,6 +33,7 @@ Melalui panel admin, admin dapat mengatur nama dan URL website serta konfigurasi
 
 - **Popunder**: tampil di halaman utama dan di setiap halaman video (termasuk bagian Riwayat Video).
 - **Smartlink**: hanya terbuka di tab baru saat pengunjung menekan tombol putar video.
+- Popunder dan Smartlink masing-masing punya saklar aktif/nonaktif di Adsterra Settings (selain saklar utama "Aktifkan iklan").
 - Isi kode Popunder dan URL Smartlink dari **Admin → Adsterra Settings**, lalu simpan. GitHub Actions akan menerapkannya ke halaman.
 
 ## Pemeriksaan akses
