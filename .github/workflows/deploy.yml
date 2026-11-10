@@ -8,6 +8,9 @@ on:
       - "generate.py"
       - "scripts/**"
       - "config.json"
+      - "assets/**"
+      - "about.html"
+      - "privacy-policy.html"
       - "admin/**"
       - ".github/workflows/**"
   workflow_dispatch:
