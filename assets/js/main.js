@@ -6,6 +6,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const cards = Array.from(document.querySelectorAll('.video-card'));
   if (!grid || !navs.length) return;
 
+  // Terjemahan label aksesibilitas (cadangan: bahasa Indonesia bila i18n.js tidak termuat)
+  const tr = (key, vars, fallback) => (window.I18N ? window.I18N.t(key, vars) : fallback);
+
   let filter = 'all';
   let page = 1;
 
@@ -19,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     b.type = 'button';
     b.textContent = label;
     b.className = 'page-btn' + (opt.active ? ' active' : '');
-    b.setAttribute('aria-label', opt.aria || ('Halaman ' + target));
+    b.setAttribute('aria-label', opt.aria || tr('page.n', { n: target }, 'Halaman ' + target));
     if (opt.active) b.setAttribute('aria-current', 'page');
     if (opt.disabled) b.disabled = true;
     b.addEventListener('click', () => render(target, true));
@@ -46,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
     navs.forEach(nav => {
       nav.innerHTML = '';
       if (total > 1) {
-        nav.appendChild(makeBtn('\u2039', page - 1, { disabled: page === 1, aria: 'Halaman sebelumnya' }));
+        nav.appendChild(makeBtn('\u2039', page - 1, { disabled: page === 1, aria: tr('page.prev', null, 'Halaman sebelumnya') }));
         pageList(total).forEach(x => {
           if (x === '...') {
             const d = document.createElement('span');
@@ -57,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
             nav.appendChild(makeBtn(x, x, { active: x === page }));
           }
         });
-        nav.appendChild(makeBtn('\u203a', page + 1, { disabled: page === total, aria: 'Halaman berikutnya' }));
+        nav.appendChild(makeBtn('\u203a', page + 1, { disabled: page === total, aria: tr('page.next', null, 'Halaman berikutnya') }));
       }
     });
 
@@ -81,4 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
     buttons.forEach(b => b.classList.toggle('active', b.dataset.filter === filter));
   }
   render(startPage, false);
+
+  // Bangun ulang nomor halaman ketika bahasa diganti agar label ARIA ikut berubah
+  document.addEventListener('i18n:change', () => render(page, false));
 });
