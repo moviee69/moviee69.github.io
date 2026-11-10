@@ -4,28 +4,37 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>MOVIEE69</title>
-  <meta name="description" content="Situs berbagi informasi dan konten yang dipublikasikan secara legal.">
+  <meta name="description" content="MOVIEE69 - situs berbagi video yang dipublikasikan secara legal.">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
   <header>
     <h1>MOVIEE69</h1>
-    <p>Konten yang dipublikasikan harus legal, memiliki izin, dan menghormati hak setiap orang.</p>
+    <nav class="filter-nav" aria-label="Kategori video">
+      <button class="filter-btn active" type="button" data-filter="all">Semua</button>
+      <button class="filter-btn" type="button" data-filter="indonesia">Indonesia</button>
+      <button class="filter-btn" type="button" data-filter="papua">Papua</button>
+      <button class="filter-btn" type="button" data-filter="barat">Barat</button>
+    </nav>
   </header>
   <main>
-    <section class="description">
-      <h2>Selamat datang</h2>
-      <p>Situs ini sedang dalam penataan. Konten lama telah dihapus. Konten baru hanya akan ditampilkan setelah dipastikan aman, legal, dan memiliki izin publikasi.</p>
+    <nav class="related-pagination home-pagination-top" id="homePaginationTop" aria-label="Halaman video"></nav>
+    <section class="video-grid" id="videoGrid">
+{{ VIDEO_CARDS }}
     </section>
-    <section class="description">
-      <h2>Komitmen kami</h2>
-      <p>Kami tidak mengizinkan konten seksual yang melibatkan anak di bawah umur, kekerasan seksual, eksploitasi, pelanggaran hak cipta, maupun materi ilegal lainnya.</p>
-    </section>
+    <div class="home-below">
+      <nav class="related-pagination" id="homePagination" aria-label="Halaman video"></nav>
+      <section class="description">
+        <h2>Komitmen kami</h2>
+        <p>Kami tidak mengizinkan konten seksual yang melibatkan anak di bawah umur, kekerasan seksual, eksploitasi, pelanggaran hak cipta, maupun materi ilegal lainnya.</p>
+      </section>
+    </div>
   </main>
   <footer>
     <p>&copy; 2026 MOVIEE69. Hak cipta dilindungi.</p>
     <p><a href="privacy-policy.html">Kebijakan Privasi</a> | <a href="about.html">Tentang</a></p>
   </footer>
+  <script src="assets/js/main.js"></script>
   {{ AD_POPUNDER }}
 </body>
 </html>
