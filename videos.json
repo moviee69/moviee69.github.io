@@ -38,5 +38,15 @@
     "deskripsi": "Video 4",
     "kategori": "papua",
     "cover": "covers/video-4-papua-part6.jpg"
+  },
+  {
+    "slug": "video-5-papua-part7",
+    "judul": "Video 5",
+    "driveId": "Hshsh",
+    "tanggal": "2026-11-11",
+    "jam": "08:38",
+    "deskripsi": "Video 5",
+    "kategori": "papua",
+    "cover": "covers/video-5-papua-part7.jpg"
   }
 ]
