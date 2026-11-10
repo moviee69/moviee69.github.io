@@ -15,8 +15,8 @@
   },
   "ads": {
     "enabled": true,
-    "popunder_enabled": true,
-    "smartlink_enabled": true,
+    "popunder_enabled": false,
+    "smartlink_enabled": false,
     "popunder": "<script src=\"https://pl32298371.profitableratecpmnetwork.com/6a/2b/38/6a2b38f890cbf20846e445d39c843294.js\"></script>",
     "social_bar": "<script src=\"https://pl32298373.profitableratecpmnetwork.com/2e/8f/37/2e8f37c73749d1918b96c91d79f4589e.js\"></script>",
     "banner_desktop": "<script>\n  atOptions = {\n    'key' : '9b237e45b96cd5c8e64ed31ee5101771',\n    'format' : 'iframe',\n    'height' : 250,\n    'width' : 300,\n    'params' : {}\n  };\n</script>\n<script src=\"https://www.highrevenueformat.com/9b237e45b96cd5c8e64ed31ee5101771/invoke.js\"></script>",
