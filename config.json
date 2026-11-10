@@ -1,0 +1,25 @@
+{
+  "site_name": "MOVIEE69",
+  "site_url": "https://moviee69.github.io/moviee69",
+  "categories": [
+    "indonesia",
+    "papua",
+    "barat"
+  ],
+  "timezone": "Asia/Jayapura",
+  "legacy_site_url": "",
+  "github": {
+    "owner": "moviee69",
+    "repository": "moviee69",
+    "branch": "main"
+  },
+  "ads": {
+    "enabled": true,
+    "popunder": "",
+    "social_bar": "",
+    "banner_desktop": "",
+    "banner_mobile": "",
+    "native": "",
+    "smartlink": ""
+  }
+}
