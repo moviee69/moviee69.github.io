@@ -18,5 +18,15 @@
     "deskripsi": "Video 2",
     "kategori": "papua",
     "cover": "covers/video-2-papua-part4.jpg"
+  },
+  {
+    "slug": "video-3-papua-part5",
+    "judul": "Video 3",
+    "driveId": "Kdjjdsjja",
+    "tanggal": "2026-11-11",
+    "jam": "08:32",
+    "deskripsi": "Video 3",
+    "kategori": "papua",
+    "cover": "covers/video-3-papua-part5.jpg"
   }
 ]
