@@ -36,15 +36,10 @@ def ad(name):
     return str(ADS.get(name,"") or "").strip()
 
 def native_ad(slot_id):
-    raw=ad("native")
-    if not raw:return ""
-    # Give each in-page placement its own container ID so slots do not collide.
-    # The provider script URL and all other supplied code remain unchanged.
-    ids=re.findall(r'container-([A-Za-z0-9_-]+)', raw)
-    if ids:
-        base=ids[0]
-        raw=raw.replace("container-"+base, f"container-{base}-{slot_id}")
-    return raw
+    # Kode native Adsterra mencari elemen berdasarkan ID container aslinya
+    # (container-<key>), jadi ID tidak boleh diubah. Di halaman video hanya ada
+    # satu slot native, sehingga tidak ada ID yang bentrok.
+    return ad("native")
 def load():
     with open(DATA,encoding="utf-8") as f:v=json.load(f)
     if not isinstance(v,list): raise ValueError("videos.json harus array")
