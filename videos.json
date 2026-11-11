@@ -48,5 +48,15 @@
     "deskripsi": "Video 5",
     "kategori": "papua",
     "cover": "covers/video-5-papua-part7.jpg"
+  },
+  {
+    "slug": "video-6-papua-part8",
+    "judul": "Video 6",
+    "driveId": "Hsusujs",
+    "tanggal": "2026-11-11",
+    "jam": "09:08",
+    "deskripsi": "Video 6",
+    "kategori": "papua",
+    "cover": "covers/video-6-papua-part8.jpg"
   }
 ]
